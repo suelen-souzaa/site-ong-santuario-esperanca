@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santuário Esperança Animal</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="src_projeto_santuario/css/styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-container">
+      <img src="src_projeto_santuario/images/logo_santuario.png" 
+           alt="Cachorro e gato do Santuário Esperança Animal" 
+           class="img-cabecalho">
+      <h1>Santuário Esperança Animal</h1>
+      <nav>
+        <ul class="menu-cards">
+          <li><a href="#inicio" class="card">Início</a></li>
+          <li><a href="#sobre" class="card">Sobre</a></li>
+          <li><a href="#ajudar" class="card">Como Ajudar</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="#contato" class="card">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Início -->
+  <section id="inicio" class="banner">
+    <h2>Um lar de amor e cuidado para animais resgatados 🐾</h2>
+    <p>Conheça nosso santuário e veja como você pode fazer a diferença!</p>
+    <a href="#ajudar" class="btn" onclick="destacarPix()">Doe Agora</a>
+    
+  </section>
+
+  <!-- Seção Sobre -->
+  <section id="sobre">
+    <h2>Quem somos</h2>
+    
+    <div class="carousel-container">
+  <button class="carousel-btn right" onclick="moverSlide(1)">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+
+  <div class="carousel-slide">
+    <img src="src_projeto_santuario/images/animais_santuario.png" alt="Santuário">
+    <img src="src_projeto_santuario/images/equipe_santuario.png" alt="Equipe do Santuário">
+    <img src="src_projeto_santuario/images/voluntarios.png" alt="Voluntários">
+    <img src="src_projeto_santuario/images/medvet_santuario.png" alt="Cuidados veterinários">
+  </div>
+
+    <p>Somos uma ONG sem fins lucrativos dedicada ao resgate, cuidado e reabilitação de animais abandonados ou vítimas de maus-tratos. Nosso objetivo é oferecer amor, abrigo e uma nova chance de vida a cada animal que chega até nós.</p>
+    <p>Somos um grupo de voluntários apaixonados por animais. O Santuário Esperança Animal nasceu do desejo de oferecer abrigo, cuidado e amor a animais resgatados de situações de risco. Com carinho, dedicação e a ajuda de pessoas como você, mudamos histórias todos os dias.</p>
+  </section>
+
+  <!-- Seção Como Ajudar -->
+  <section id="ajudar">
+    <h2>Como você pode ajudar</h2>
+    <ul>
+      <li onclick="abrirAdocao()">🐈‍⬛ Adoção responsável de animais</li>
+      <li onclick="abrirApadrinhamento()">🐕 Apadrinhamento de animais</li>
+      <li id="pix-doacao">💖 Doações financeiras via PIX: santuario@ajuda.com</li>
+      <li onclick="abrirVoluntariado('doacao')">🍽️ Doação de ração, medicamentos ou produtos de higiene</li>
+      <li onclick="abrirVoluntariado('voluntario')">🐾 Voluntariado no santuário</li>
+    </ul>
+    <p class="ajuda-msg">Qualquer ajuda faz a diferença. Juntos, podemos salvar vidas!</p>
+  </section>
+
+  <!-- Seção Voluntariado / Doação -->
+  <section id="secao-voluntariado" style="display:none;">
+    <h2 id="titulo-cadastro"></h2>
+    <form id="form-voluntariado">
+      <label for="voluntariado-tipo">Tipo de cadastro:</label>
+      <select id="voluntariado-tipo">
+        <option value="voluntario">Voluntário</option>
+        <option value="doacao">Doação</option>
+      </select>
+
+      <label for="voluntariado-nome">Nome:</label>
+      <input type="text" id="voluntariado-nome" placeholder="Digite seu nome completo" required>
+
+      <label for="voluntariado-email">E-mail:</label>
+      <input type="email" id="voluntariado-email" placeholder="Digite seu e-mail, exemplo: fulano@exemplo.com" required>
+
+      <label for="voluntariado-telefone">Telefone:</label>
+      <input type="tel" id="voluntariado-telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+      <label for="voluntariado-mensagem">Mensagem:</label>
+      <textarea id="voluntariado-mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Seção Adoção -->
+  <section id="secao-adocao" style="display:none;">
+    <h2>Pré-Cadastro de Adoção 🐾</h2>
+    <p>
+      Antes de preencher o formulário, leia atentamente:
+    </p>
+    <ul>
+      <li>Os tutores devem se comprometer em fornecer acompanhamento médico regular e vacinas em dia.</li>
+      <li>Após o pré-cadastro, nossa equipe fará visita domiciliar para verificar as condições do lar.</li>
+      <li>Mesmo após a adoção, haverá acompanhamento do animal por pelo menos 1 ano, incluindo microchipagem.</li>
+      <li>Somente após a avaliação presencial, a adoção será aprovada.</li>
+    </ul>
+    <p>Ao preencher este formulário, você declara que concorda com todas as condições acima e autoriza nossa equipe a realizar a avaliação do seu lar.</p>
+
+    <form id="form-adocao">
+      <label for="adocao-nome">Nome completo:</label>
+      <input type="text" id="adocao-nome" placeholder="Digite seu nome completo" required>
+
+      <label for="adocao-email">E-mail:</label>
+      <input type="email" id="adocao-email" placeholder="Digite seu e-mail, exemplo: fulano@exemplo.com" required>
+
+      <label for="adocao-telefone">Telefone:</label>
+      <input type="tel" id="adocao-telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+      <label for="adocao-animal">Animal que deseja adotar:</label>
+      <select id="adocao-animal" required>
+        <option value="">Selecione</option>
+        <option value="gato">Gato</option>
+        <option value="cao">Cachorro</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="adocao-experiencia">Experiência com animais:</label>
+      <textarea id="adocao-experiencia" placeholder="Conte-nos sobre sua experiência com animais" required></textarea>
+
+      <label for="adocao-documento">Anexe documento residencial (obrigatório):</label>
+      <input type="file" id="adocao-documento" accept="image/*,.pdf" required>
+
+      <label for="adocao-mensagem">Mensagem adicional:</label>
+      <textarea id="adocao-mensagem" placeholder="Informações adicionais que deseja nos passar" required></textarea>
+
+      <label>
+        <input type="checkbox" id="adocao-concordo" required>
+        Declaro que li e concordo com todas as condições acima e autorizo a avaliação do meu lar.
+      </label>
+
+      <button type="submit">Enviar Pré-Cadastro</button>
+    </form>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Fale conosco</h2>
+    <form id="form-contato">
+      <label for="contato-nome">Nome:</label>
+      <input type="text" id="contato-nome" placeholder="Digite seu nome completo" required>
+
+      <label for="contato-email">E-mail:</label>
+      <input type="email" id="contato-email" placeholder="Digite seu e-mail, exemplo: fulano@exemplo.com" required>
+
+      <label for="contato-telefone">Telefone:</label>
+      <input type="tel" id="contato-telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+      <label for="contato-mensagem">Mensagem:</label>
+      <textarea id="contato-mensagem" placeholder="Digite aqui a mensagem que deseja nos enviar" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Santuário Esperança Animal — Todos os direitos reservados.</p>
+    Desenvolvido por 
+    <a href="https://instagram.com/suexsurvive" target="_blank">Suélen Souza</a>.
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/seuusuario" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/seunumerowhatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:contato@santuarioanimal.org" aria-label="E-mail">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.facebook.com.br/seuusuario" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </footer>
+
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+
+  <!-- Scripts JS -->
+  <script src="src_projeto_santuario/js/Botao.js"></script>
+  <script src="src_projeto_santuario/js/Adocao.js" defer></script>
+  <script src="src_projeto_santuario/js/Contato.js"></script>
+  <script src="src_projeto_santuario/js/Apadrinhamento.js"></script>
+  <script src="src_projeto_santuario/js/Voluntariado.js"></script>
+  <script src="src_projeto_santuario/js/CarroselSobre.js"></script>
+
+  <script>
+  
+  // -- Garantir que a função esteja no escopo global -- \\
+    window.abrirAdocao = function() {
+  console.log("Função abrirAdocao foi chamada!");
+
+  const secaoAdocao = document.getElementById("secao-adocao");
+  if (secaoAdocao) {
+    secaoAdocao.style.display = "block";
+    secaoAdocao.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const secaoVoluntariado = document.getElementById("secao-voluntariado");
+  if (secaoVoluntariado) {
+    secaoVoluntariado.style.display = "none";
+  }
+
+  const secaoApadrinhamento = document.getElementById("secao-apadrinhamento");
+  if (secaoApadrinhamento) {
+    secaoApadrinhamento.style.display = "none";
+  }
+};
+
+  </script>
+</body>
+</html>
