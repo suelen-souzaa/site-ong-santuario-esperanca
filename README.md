@@ -26,6 +26,7 @@ README.md → LICENSE → projetos.html →  index.html → cadastro.html → sr
   ↳ images/
     ↳ logo_santuario.png → animais_santuario.png → equipe_santuario.png → voluntarios.png → medvet_santuario.png
 
+---
 
 ## 💻 Tecnologias utilizadas
 
@@ -56,12 +57,16 @@ São originais, livres de direitos autorais e podem ser utilizadas para fins edu
 Você também pode publicar o site usando GitHub Pages para torná-lo acessível online.
 
 
-⚠️ Aviso de uso
+---
+
+⚠️ Aviso de uso<br>
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos por Suélen Souza.
 Todos os arquivos, incluindo imagens, código e conteúdos presentes neste repositório são originais e não devem ser utilizados, reproduzidos ou distribuídos sem autorização prévia da autora.
+</br>
 
+---
 
-🐈‍⬛ Créditos
-Desenvolvido por Suélen Souza.
+🐈‍⬛ Créditos<br>
+Desenvolvido por Suélen Souza.<br>
 Todos os direitos reservados © 2025.
 
