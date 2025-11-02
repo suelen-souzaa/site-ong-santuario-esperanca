@@ -1,4 +1,4 @@
-# 🐾 Santuário Esperança Animal
+# 🐾 ONG Santuário Esperança Animal
 
 Este é o site oficial do **Santuário Esperança Animal**, uma ONG fictícia sem fins lucrativos dedicada ao resgate, cuidado e reabilitação de animais abandonados ou vítimas de maus-tratos. Criado com carinho para informar, engajar e facilitar a ajuda de voluntários e doadores.
 
