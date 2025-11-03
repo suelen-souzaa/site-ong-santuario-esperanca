@@ -54,8 +54,6 @@ São originais, livres de direitos autorais e podem ser utilizadas para fins edu
    git clone https://github.com/suelen-souzaa/santuario-esperanca-animal.git
 
 2. Abra o arquivo index.html no navegador.
-Você também pode publicar o site usando GitHub Pages para torná-lo acessível online.
-
 
 ---
 
